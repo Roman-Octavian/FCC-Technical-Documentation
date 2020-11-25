@@ -3,16 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
-        <meta name="theme-color" content="#FFFFFF">
+        <meta name="theme-color" content="#24292E">
         <meta name="description" content="Technical Documentation for HyperText Markup Language. The fourth project of the FCC Responsive Web Design Certification.">
+        <meta name="author" content="Roman Octavian">
         <meta property="og:title" content="Technical Documentation Page">
         <meta property="og:url" content="https://roman-octavian.github.io/FCC-Technical-Documentation">
-        <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg">
+        <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="en_GB">
         <title>Technical Documentation Page</title>
         <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="images\html.png">
+        <link rel="icon" href="images/html.png">
     </head>
     <body>
         
@@ -42,38 +43,67 @@
             <section class="main-section" id="What_is_HTML?">
                 <header>What is HTML?</header>
                 <p>HTML or <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage is a markup language that tells web browsers how to structure the web pages you visit. HTML consists of a series of elements, which you use to enclose, wrap, or <em>mark up</em> different parts of content to make it appear or act in a certain way.</p>
-                <p>"Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. HTML uses "markup" to annotate text, images, and other content for display in a Web browser. An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "<" and ">".</p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>"Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. HTML uses "markup" to annotate text, images, and other content for display in a Web browser. An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "<code class="inline-code">&lt;</code>" and "<code class="inline-code">&gt;</code>".</p>
             </section>
+            <hr>
+
             <section class="main-section" id="What_do_you_need?">
                 <header>What do you need?</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>To start working with HTML, there are a few requirements:</p>
+                <ul class="doc-ul">
+                    <li>Basic computer literacy</li>
+                    <li>Basic software installed on your machine</li>
+                    <li>Basic knowledge of working with files</li>
+                </ul>
+                <p>Notwithstanding that there are many ways to learn HTML, certain online resources such as <a class="inline-a" href="https://www.freecodecamp.org/" target="_blank"><em>freeCodeCamp</em> </a>or<a class="inline-a" href="https://codepen.io/" target="_blank"> <em>CodePen</em></a> will allow you to learn and write HTML straight from your browser.</p>
             </section>
+            <hr>
+            
             <section class="main-section" id="Basic_structure_of_HTML">
                 <header>Basic structure of HTML</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>HTML elements are as seen in the image below mainly comprised of opening tags, optional attributes, the content itself, and closing tags.</p>
+                <img src="images/element_structure.png" alt="image showcasing the structure of an HTML element">
+                <p>The basic structure of an HTML file normally includes the <code class="inline-code">&lt;!DOCTYPE&gt;</code class="inline-code"> at the very top, the <code class="inline-code">&lt;html&gt;</code> element right below encasing the rest of the code, and the <code class="inline-code">&lt;head&gt;</code> and <code class="inline-code">&lt;body&gt;</code> respectively. This basic structure would look something like this:</p>
+                
+<pre id="basic-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <p>The <code class="inline-code">&lt;head&gt;</code> should contain a <code class="inline-code">&lt;title&gt;</code>, whereas the body has a structure of its own that usually contains:</p>
+                <ul class="doc-ul">
+                    <li>a <code class="inline-code">&lt;header&gt;</code></li>
+                    <li>a <code class="inline-code">&lt;main&gt;</code> tag where the main content goes</li>
+                    <li>a <code class="inline-code">&lt;footer&gt;</code> at the bottom of the page</li>
+                </ul>
             </section>
+            <hr>
+
             <section class="main-section" id="HTML_Metadata">
                 <header>HTML Metadata</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>The <code class="inline-code">&lt;head&gt;</code> is not displayed in the browser when the page loads as it mostly contains metadata. Metadata is data about the HTML itself. The most common elements included in the <code class="inline-code">&lt;head&gt;</code> are:</p>
+                <ul class="doc-ul">
+                    <li>The <code class="inline-code">&lt;title&gt;</code> element, containing the overall title of the HTML, not to be confused with the <code class="inline-code">&lt;h1&gt;</code> heading.</li>
+                    <li>Many <code class="inline-code">&lt;meta&gt;</code> tags which add a description, an author, images, theme colors, etc. </li>
+                    <li>A favicon included with a <code class="inline-code">&lt;link&gt;</code> element.</li>
+                    <li>And many others.</li>
+                </ul>
+                <p>Here's how the <code class="inline-code">&lt;head&gt;</code> of this website looks like:</p>
+                <img id="screenshot" src="images/head.png" alt="screenshot of the head tag">
             </section>
+            <hr>
+
             <section class="main-section" id="HTML_fundamentals">
                 <header>HTML fundamentals</header>
                 <p></p>
                 <p></p>
                 <code></code>
                 <ul><li></li></ul>
+            </section>
             <section class="main-section" id="Creating_hyperlinks">
                 <header>Creating hyperlinks</header>
                 <p></p>
@@ -108,6 +138,7 @@
                 <p></p>
                 <code></code>
                 <ul><li></li></ul>
+            </section>
             <section class="main-section" id="Vector_Graphics">
                 <header>Vector graphics</header>
                 <p></p>

@@ -10,11 +10,17 @@
     padding: 0;
 }
 
+.inline-code {
+    background-color: rgba(220,220,220,.5);
+    font-size: 1.6rem;
+}
+
 #navbar {
     position: fixed;
     background-color: #24292E;
     width: 20vw;
     height: 100vh;
+    min-width: 273.2px;
 }
 
 #navbar > header {
@@ -41,13 +47,14 @@
     text-align: center;
     height: 7.5vh;
     padding-top: 1.75vh;
+    white-space: nowrap;
 }
 
 #main-doc {
     display: block;
     position: absolute;
     list-style-type: none;
-    margin-left: 25vw;
+    left: 300px;
     padding: 2vh 1vw 2vw 0vw;
 }
 
@@ -55,12 +62,44 @@
     font-size: 4rem;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 2vh;
-    text-decoration-line: underline;
 }
+
 .main-section > p {
     font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 2vh;
+}
+
+.doc-ul {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+}
+
+.inline-a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.inline-a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+#basic-html {
+    background-color: rgba(220,220,220,.5);
+    font-size: 1.6rem;
+    margin-right: 67%;
+    margin-bottom: 2vh;
+}
+hr {
+    color: darkgray;
+    margin-bottom: 3vh;
+}
+
+#screenshot {
+    margin-bottom: 3vh;
 }
 @media only screen and (max-width: 600px) {
 
