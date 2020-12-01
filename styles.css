@@ -172,7 +172,7 @@ video, audio {
     #navbar > ul {    
         overflow-x: hidden;
         overflow-y: auto;
-        height: 12vh;
+        height: 65%;
         max-width: 100%;
     }
 
