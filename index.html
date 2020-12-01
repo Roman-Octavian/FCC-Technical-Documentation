@@ -29,9 +29,8 @@
                 <li><a class="nav-link" href="#Advanced_text_formatting">Advanced text formatting</a></li>
                 <li><a class="nav-link" href="#Images_in_HTML">Images in HTML</a></li>
                 <li><a class="nav-link" href="#Videos_and_Audios">Videos and Audios</a></li>
-                <li><a class="nav-link" href="#Other_Embedding_Technologies">Other Embedding Technologies</a></li>
+                <li><a class="nav-link" href="#HTML_Comments">HTML Comments</a></li>
                 <li><a class="nav-link" href="#Vector_Graphics">Vector graphics</a></li>
-                <li><a class="nav-link" href="#HTML_tables">HTML tables</a></li>
                 <li><a class="nav-link" href="#Applying_CSS_and_JS">Applying CSS and JS</a></li>
                 <li><a class="nav-link" href="#Debugging_HTML">Debugging HTML</a></li>
                 <li><a class="nav-link" href="#About_this_documentation">About this documentation</a></li>
@@ -65,7 +64,7 @@
                 <img src="images/element_structure.png" alt="image showcasing the structure of an HTML element">
                 <p>The basic structure of an HTML file normally includes the <code class="inline-code">&lt;!DOCTYPE&gt;</code class="inline-code"> at the very top, the <code class="inline-code">&lt;html&gt;</code> element right below encasing the rest of the code, and the <code class="inline-code">&lt;head&gt;</code> and <code class="inline-code">&lt;body&gt;</code> respectively. This basic structure would look something like this:</p>
                 
-<pre id="basic-html"><code>&lt;!DOCTYPE html&gt;
+<pre class="code-block"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
 
@@ -99,80 +98,251 @@
 
             <section class="main-section" id="HTML_fundamentals">
                 <header>HTML fundamentals</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>To insert basic text, we use the <code class="inline-code">&lt;p&gt;</code> tag like so:</p>
+<pre class="code-block"><code>&lt;p&gt;I am a paragraph!&lt;/p&gt;</code></pre>
+                <p>To add headers, we use the <code class="inline-code">&lt;h&gt;</code> tags. They go from one to six. It is important to use them in a proper hierarchical order as they are supposed to give structure to the page.</p>
+ 
+<pre class="code-block"><code>&lt;h1&gt;Your title goes here&lt;/h1&gt;
+    (content)
+    &lt;h2&gt;Section&lt;/h2&gt;
+    (content)
+        &lt;h3&gt;Subsection&lt;/h3&gt;</code></pre>
+
+                <p>You can also create either ordered or unordered lists with the <code class="inline-code">&lt;ol&gt;</code> and <code class="inline-code">&lt;ul&gt;</code> tags like so:</p>
+<pre class="code-block"><code>&lt;ul&gt;
+    &lt;li&gt;(list item 1)&lt;/li&gt;
+    &lt;li&gt;(list item 2)&lt;/li&gt;
+    &lt;li&gt;(list item 3)&lt;/li&gt;
+    &lt;li&gt;(list item 4)&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <p>Output:</p>
+                <ul class="doc-ul">
+                    <li>(list item 1)</li>
+                    <li>(list item 2)</li>
+                    <li>(list item 3)</li>
+                    <li>(list item 4)</li>
+                </ul>
+
+                <p>Finally, you can style text with the <code class="inline-code">&lt;em&gt;</code> and <code class="inline-code">&lt;strong&gt;</code> tags. The first represents emphasis and the second strong importance.</p>
+<pre class="code-block"><code>&lt;p&gt;You &lt;em&gt;must&lt;/em&gt; eat your veggies!&lt;/p&gt;
+&lt;p&gt;Do &lt;strong&gt;NOT&lt;/strong&gt; try this at home.&lt;/p&gt;</code></pre>
+                <p>Equals:</p>
+                <p>You <em>must</em> eat your veggies!</p>
+                <p>Do <strong>NOT</strong> try this at home.</p>
             </section>
+            <hr>
+
             <section class="main-section" id="Creating_hyperlinks">
                 <header>Creating hyperlinks</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address.</p>
+                <p>To create a link, we use the anchor element like this:</p>
+                <pre class="code-block"><code>&lt;a href="URL, file path, or ID attribute goes here"&gt;Link text&lt;/a&gt;</code></pre>
+                <p>You can put anchors within other elements such as images or paragraphs. For example:</p>
+                <pre class="code-block"><code class="inline-code">&lt;p&gt;Click on the following &lt;a href="https://www.google.com/" target="_blank"&gt;link&lt;/a&gt; to open Google.&lt;/p&gt;</code></pre>
+                <p>Equals:</p>
+                <p>Click on the following <a href="https://www.google.com/" target="_blank">link</a> to open Google.
+                <p>Note: <code class="inline-code">target="_blank"</code> indicates that the link should open in a new tab.</p>
             </section>
+            <hr>
+
             <section class="main-section" id="Advanced_text_formatting">
                 <header>Advanced text formatting</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>Aside from the basic formatting seen previously, there are many other fext format options in HTML:</p>
+                <ul class="doc-ul">
+                    <li>Description Lists</li>
+                    <li>Quotations</li>
+                    <li>Abbreviations</li>
+                    <li>Contact Details</li>
+                    <li>Superscript and Subscript</li>
+                    <li>Computer Code</li>
+                    <li>Times and Dates</li>
+                </ul>
+                <p class="formatting-title">Description Lists:</p>
+<pre class="overflowing-code-block">
+<code>&lt;dl&gt;
+&lt;dt&gt;Aside&lt;/dt&gt;
+&lt;dd&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim vehicula euismod. Duis elit sapien, tempus interdum aliquam quis, gravida nec neque.&lt;/dd&gt;
+&lt;dd&gt;Quisque facilisis ultrices urna in hendrerit. Donec tristique, mauris nec viverra facilisis, orci ante consectetur augue, ac varius tellus diam a odio.&lt;/dd&gt;
+&lt;/dl&gt;</code>
+</pre>
+<p>Equals:</p>
+<dl>
+    <dt>Aside</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim vehicula euismod. Duis elit sapien, tempus interdum aliquam quis, gravida nec neque.</dd>
+    <dd>Quisque facilisis ultrices urna in hendrerit. Donec tristique, mauris nec viverra facilisis, orci ante consectetur augue, ac varius tellus diam a odio.</dd>
+</dl>
+
+<p class="formatting-title">Quotations:</p>
+<pre class="overflowing-code-block">
+<code>&lt;blockquote&gt;Lorem ipsum&lt;/blockquote&gt;
+&lt;q&gt;Lorem ipsum&lt;/q&gt;
+&lt;cite&gt;Lorem ipsum&lt;/cite&gt;</code>
+</pre>
+<p>Equals:</p>
+<div id="quote-div">
+<blockquote>Lorem ipsum</blockquote>
+<q>Lorem ipsum</q>
+<br>
+<cite>Lorem ipsum</cite>
+</div>
+
+<p class="formatting-title">Abbreviations:</p>
+<pre class="code-block">
+<code>&lt;p&gt;We are using &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; right now.&lt;/p&gt;</code>
+</pre>
+<p>Equals:</p>
+<p>We are using <abbr title="Hypertext Markup Language">HTML</abbr> right now.</p>
+
+<p class="formatting-title">Contact Details</p>
+<pre class="code-block">
+<code>&lt;address&gt;
+    &lt;p&gt;Lorem Street, Ipsum, Germany&lt;/p&gt;
+&lt;/address&gt;</code>
+</pre>
+<p>Equals:</p>
+
+<address>
+    <p>Lorem Street, Ipsum, Germany</p>
+</address>
+
+<p class="formatting-title">Superscript and Subscript:</p>
+<pre class="code-block">
+<code>&lt;p&gt;My birthday is on the 10&lt;sup&gt;th&lt;/sup&gt; of October&lt;/p&gt;
+&lt;p&gt;The chemical formula of water is H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;</code>
+</pre>
+<p>Equals:</p>
+<p>My birthday is on the 10<sup>th</sup> of October</p>
+<p>The chemical formula of water is H<sub>2</sub>O</p>
+
+<p class="formatting-title">Computer Code:</p>
+<pre class="code-block">
+<code>&lt;p&gt;We use the &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag to create paragraphs.&lt;/p&gt;</code>
+</pre>
+<p>Equals:</p>
+<p>We use the <code>&lt;p&gt;</code> tag to create paragraphs.</p>
+
+<p class="formatting-title">Times and Dates:</p>
+<pre class="code-block">
+<code>&lt;time datetime="2020-11-30"&gt;The 30&lt;sup&gt;th&lt;/sup&gt; of November 2020&lt;/time&gt;</code>
+</pre>
+<p>Equals:</p>
+<time datetime="2020-11-30">The 30<sup>th</sup> of November 2020</time>
+<p>Note: While this doesn't necessarily change the format of the text, it does make the date and time machine-readable no matter how you style or format them.</p>
             </section>
+            <hr>
+
             <section class="main-section" id="Images_in_HTML">
                 <header>Images in HTML</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>Adding images to HTML is quite easy. We use the <code class="inline-code">&lt;img&gt;</code> tag like this:</p>
+<pre class="code-block">
+<code>&lt;img src="image source goes here"&gt;
+</code></pre>
+                <p>Adding an <code class="inline-code">alt</code> attribute to your image is mandatory. This alternative text will appear if for some reason your image fails to load, hence why its value should be a textual description of the image it accompanies.</p>
+                <p>You can specify the width and height of an image as well, and you can also add an optional title that will appear when you hover over the image. Titles however aren't ideal because only certain devices display them properly.</p>
+                <p>Here's an example:</p>
+<pre class="code-block">
+<code>&lt;img src="images/html.png" alt="The HTML5 Logo" width="300" height="300" title="The HTML5 Logo"&gt;
+</code></pre>
+                <p>Equals:</p>
+                <img id="html5-logo" src="images/html.png" alt="The HTML5 Logo" width="300" height="300" title="The HTML5 Logo">
+                <p>Note: This image has been stored locally and its source attribute is simply its relative path in a folder. You may also use URLs and other means as sources.</p>
             </section>
+            <hr>
+
             <section class="main-section" id="Videos_and_Audios">
                 <header>Videos and Audios</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>Embedding Videos and Audios to your HTML works in a similar fashion to how images do. We use the <code class="inline-code">&lt;video&gt;</code> and <code class="inline-code">&lt;audio&gt;</code> tags.</p>
+                <p>Here's how they would look like:</p>
+<pre class="overflowing-code-block"><code>
+&lt;video controls width="400" height="400" preload="auto"&gt;
+&lt;source src="videos/rabbit320.mp4"&gt type="video/mp4";
+&lt;p&gt;Video failed to load. Open &lt;a href="videos/rabbit320.mp4"&gt;this&lt;/a&gt; URL instead to watch.&lt;/p&gt;
+&lt;/video&gt;
+</code></pre>
+                <p>Equals:</p>
+                <video controls width="400" height="400" preload="auto">
+                <source src="videos/rabbit320.mp4" type="video/mp4">
+                <p>Video failed to load. Open <a href="videos/rabbit320.mp4">this</a> instead URL to watch.</p>
+                </video>
+
+<pre class="overflowing-code-block"><code>
+&lt;audio controls preload="auto"&gt;
+&lt;source src="audios/viper.ogg" type="audio/ogg"&gt;
+&lt;p&gt;Audio failed to load. Open &lt;a href="audios/viper.ogg"&gt;this&lt;/a&gt; URL instead to listen.&lt;/p&gt;
+&lt;/audio&gt;
+</code></pre>
+                <p>Equals:</p>
+                <audio controls preload="auto">
+                    <source src="audios/viper.ogg" type="audio/ogg">
+                    <p>Audio failed to load. Open <a href="audios/viper.ogg">this</a> instead URL to listen.</p>
+                    </audio>
+                <p>Note: These are also local files just like the image. Also, the paragraphs inside the elements are fallbacks in case the multimedia content doesn't work.</p>
             </section>
-            <section class="main-section" id="Other_Embedding_Technologies">
-                <header>Other embedding technologies</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+            <hr>
+
+            <section class="main-section" id="HTML_Comments">
+                <header>HTML comments</header>
+                <p>Comments are a powerful tool in HTML. They allow you to make annotations directly into the source code without affecting it's functionality unless you want it to. Thus, comments can be used to tell others, or even yourself if you're forgetful, what certain sections of your HTML do. Wrapping code in comments also disable it which can be useful if you want to temporarily deactive a part of your code without deleting it.</p>
+                <p>Here's how a comment looks like:</p>
+<pre class="overflowing-code-block">
+<code>&lt;!-- Below lies a very important paragraph! --&gt;
+&lt;p&gt;Very important paragraph.&lt;/p&gt;
+</code></pre>
+                <p>Equals:</p>
+                <!-- Below lies a very important paragraph! -->
+                <p>Very important paragraph</p>
+                <p>As expected, you cannot see the comment.</p>
             </section>
+            <hr>
+
             <section class="main-section" id="Vector_Graphics">
                 <header>Vector graphics</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>To add vector images to your HTML, you can either:  </p>
+                <ul class="doc-ul">
+                    <li>Use the <code class="inline-code">&lt;img&gt;</code> element as instructed previously with an SVG file.</li>
+                    <li>Use the <code class="inline-code">&lt;svg&gt;</code> element and manually create vector graphics with code.</li>
+                </ul>
+                <p>The second method is only recommended for simple shapes, as complex images are hard to code manually and require specialized tools.</p>
+                <p>Here's an SVG file added with <code class="inline-code">&lt;img&gt;</code>:</p>
+                <img id="python" src="images/Python.svg" alt="Python logo svg file" width="250" height="250">
             </section>
-            <section class="main-section" id="HTML_tables">
-                <header>HTML tables</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
-            </section>
+            <hr>
+
             <section class="main-section" id="Applying_CSS_and_JS">
                 <header>Applying CSS and JS</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>To style your HTML, you'll most likely want to use Cascading Style Sheets abbreviated CSS. There are three ways to apply CSS to your HTML:</p>
+                <ul class="doc-ul">
+                    <li>By coding it directly into the element with the <code class="inline-code">&lt;style&gt;</code> attribute</li>
+                    <li>By adding a <code class="inline-code">&lt;style&gt;</code> section to your HTML </li>
+                    <li>By using the <code class="inline-code">&lt;link&gt;</code> attribute to reference an external file.</li>
+                </ul>
+                <p>While the first two methods are OK for simple webpages, CSS quickly occupies lots of space so the third option is the most common amongst developers. To link to an external CSS file, all you have to do is link to it in the <code class="inline-code">&lt;head&gt;</code> of your HTML like so:</p>
+<pre class="overflowing-code-block">
+<code>&lt;link rel="stylesheet" href="your-css-file-name.css"&gt;</code></pre>
+
+                <p>Applying JavaScript is easy too. All you have to do is link to it with the <code class="inline-code">&lt;script&gt;</code> element like this:</p>
+<pre class="overflowing-code-block">
+<code>&lt;script src="URL or local path goes here"&gt;&lt;/script&gt;</code></pre>
             </section>
+            <hr>
+
             <section class="main-section" id="Debugging_HTML">
                 <header>Debugging HTML</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>Whilst writing HTML you'll most likely make mistakes every once in a while. Since HTML is a permisive language, your webpage will still load in spite of said mistakes. However, the result may not be acceptable. To mend this, you ought to debug your HTML, to find out what went wrong and fix it. There are many ways to debug HTML, including:</p>
+                <ul class="doc-ul">
+                    <li>Reviewing your HTML manually, focusing on the sections that appear to be broken looking for missing tags, misspellings and other errors.</li>
+                    <li>Making use of debug tools built into a code editor. If you use a code editor such as Visual Studio Code, there are debug tools available to you, and the program itself will usually make it pretty obvious when there is a mistake.</li>
+                    <li>Using a validator such as the <a href="https://validator.w3.org/" target="_blank">W3 Validator</a>. This tool made by the organization responsible for HTML itself will take your HTML and look for errors.</li>
+                </ul>
+                <p>Most environments in which you'll be working with HTML have "undo" buttons so as long as you back-up your code, trial and error and messing around should be enough to fix most bugs.</p>
             </section>
+            <hr>
+
             <section class="main-section" id="About_this_documentation">
                 <header>About this documentation</header>
-                <p></p>
-                <p></p>
-                <code></code>
-                <ul><li></li></ul>
+                <p>The information provided in this documentation may be intentionally vague or incomplete for the sake of brevity. All the content has been developed either entirely or partially with the help of the MDN HTML Web Documentation for non-profit educational purposes.</p>
+                <p>This documentation is merely a brief project aimed at completing a freeCodeCamp certification. If you want to learn how to use HTML properly, please use the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">MDN HTML Documentation</a>.</p>
+                <p id="disclaimer">Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.</p>
             </section>
             
         </main>
