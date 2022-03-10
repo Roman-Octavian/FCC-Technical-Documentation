@@ -10,17 +10,21 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .inline-code {
     background-color: rgba(220,220,220,.5);
     font-size: 1.6rem;
 }
 
 #navbar {
+    display: inline-block;
     position: fixed;
     background-color: #24292E;
-    width: 20vw;
+    width: 28rem;
     height: 100vh;
-    min-width: 273.2px;
 }
 
 #navbar > header {
@@ -28,7 +32,7 @@
     font-family: "Montserrat", serif;
     color: white;
     text-align: center;
-    padding: 1vh 0 1vh 0;
+    padding: 5rem 0 1vh 0;
 }
 
 #navbar > ul {    
@@ -38,23 +42,22 @@
 }
 
 .nav-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     color: white;
     text-decoration: none;
     border-top: 1px solid darkgray;
     list-style-type: none;
-    text-align: center;
-    height: 7.5vh;
-    padding-top: 1.75vh;
+    height: 7rem;
     white-space: nowrap;
 }
 
 #main-doc {
-    display: block;
-    position: absolute;
+    display: inline-block;
+    margin-left: 30rem;
     list-style-type: none;
-    left: 300px;
     padding: 2vh 1vw 2vw 0vw;
 }
 
@@ -160,7 +163,6 @@ video, audio {
 
 @media only screen and (max-width: 600px) and (min-width: 0px) {
     #navbar {
-        position: fixed;
         display: block;
         background-color: #24292E;
         width: 100%;
@@ -176,8 +178,18 @@ video, audio {
         max-width: 100%;
     }
 
+    .nav-link {
+        font-size: 1.5rem;
+    }
+
+    #navbar > header {
+        font-size: 1.5rem;
+        padding: 2rem 0 1vh 0;
+    }
+
     #main-doc {
         display: block;
+        margin-left: 0;
         position: absolute;
         list-style-type: none;
         top: 20vh;
@@ -240,24 +252,27 @@ video, audio {
 @media only screen and (min-width: 601px) and (max-width: 992px) {
 
     #navbar {
-        display: block;
-        position: fixed;
-        background-color: #24292E;
-        width: 215px;
-        height: 100vh;
-        min-width: 0px;
-        max-width: 240px;
-        z-index: 1;
+        width: 20rem;
+        min-width: 0;
+    }
+
+    #navbar > header {
+        font-size: 1.5rem;
+        padding: 2rem 0 1vh 0;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        border-top: 1px solid darkgray;
+        list-style-type: none;
+        height: 7rem;
+        white-space: nowrap;
     }
 
     #main-doc {
-        display: block;
-        position: absolute;
-        list-style-type: none;
-        left: 230px;
-        padding: 2vh 1vw 2vw 0vw;
-        z-index: 0;
-        max-width: 100%;
+        margin-left: 22rem;
     }
 
     img {
